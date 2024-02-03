@@ -1,14 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ['uploadthing.com', 'lh3.googleusercontent.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'utfs.io',
-      },
-    ],
-  },
-}
+const { i18n } = require('./next-i18next.config');
 
-module.exports = nextConfig
+module.exports = {
+    eslint: {
+        dirs: ['src'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+    },
+    i18n,
+}
