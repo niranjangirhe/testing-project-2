@@ -80,7 +80,7 @@ const SelectTokenTail = () =>{
                                                    id="address"
                                             />
                                             <div className="flex justify-center z-10 text-white  rounded-lg m-1   -ml-7 ">
-                                                <button >
+                                                <button>
                                                     <i className="fa fa-search" aria-hidden="true"></i>
                                                 </button>
                                             </div>
