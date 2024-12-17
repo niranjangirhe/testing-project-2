@@ -1,10 +1,12 @@
 ## How to use
 ```cmd
-yarn version set 3.2.3(local command prompt)
+-envirionment
+node version : 18.xx
 
-yarn
+-instruction
+npm i
 
-yarn start
+npm start
 ```
 
 
