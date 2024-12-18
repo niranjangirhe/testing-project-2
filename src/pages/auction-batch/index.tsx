@@ -54,7 +54,7 @@ const AuctionList = () =>{
             <div className="mt-10  ">
                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                    {auctionList.map((item=>(
-                   <Link key={item.img} href="/auction-detail">
+                   <Link passHref key={item.img} href="/auction-detail">
                        {/* <a className="transition duration-300 transform hover:scale-105"> */}
                    <div className="text-white p-2 bg-gray-700 rounded-xl">
                        <img   src={item.img} alt=""/>

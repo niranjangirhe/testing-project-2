@@ -47,7 +47,8 @@ const DropsList = () =>{
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-24 mx-4">
                     {list.map((item=>(
-                        <Link key={item.name} href="/drops/details"><a>
+                        <Link passHref key={item.name} href="/drops/details">
+                            {/* <a> */}
                     <div className="transform  hover:scale-105 transition duration-300">
                         <img className="rounded-xl" src={item.img} alt=""/>
                         <div className="text-gray-100 text-xl my-3 truncate  font-semibold">
@@ -73,7 +74,7 @@ const DropsList = () =>{
                             </div>
                         </div>
                     </div>
-                            </a>
+                            {/* </a> */}
                         </Link>
                     )))}
                 </div>
@@ -158,7 +159,7 @@ const Drops = () =>{
                                         </div>
                                         </div>
                                         <div className="flex justify-center xl:justify-start">
-                                            <Link href="/drops/details" >
+                                            <Link passHref href="/drops/details" >
                                         {/* <a className="px-28 py-2 bg-indigo-700 text-gray-200 rounded-full transform hover:scale-105 transition duration-500 cursor-pointer"> */}
                                             Check Details
                                         {/* </a> */}

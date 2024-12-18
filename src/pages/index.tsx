@@ -1,16 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Home from "./home";
+import Link from 'next/link';
 
 const IndexPage: NextPage = () => {
   return (
-    <div >
-      <Head>
-        <title>Web3Games On-Chain | Dapp</title>
-        <link rel="icon" href="/web3gsmall.png" />
+    <>
+      <Head >
+        <title >Web3Games On-Chain | Dapp</title>
+        <Link passHref rel="icon" href="/web3gsmall.png" />
       </Head>
           <Home></Home>
-    </div>
+    </>
   )
 }
 

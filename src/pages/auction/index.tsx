@@ -69,7 +69,7 @@ const Auction = () =>{
                             </div>
                             <div className="mt-20 ">
                                 {auction.map((item=>(
-                                <Link key={item.img} href="/auction-batch">
+                                <Link passHref key={item.img} href="/auction-batch">
                                     {/* <a> */}
                                 <div className="relative mb-10 mx-4 lg:mx-28">
                                     <div className="absolute inset-0">

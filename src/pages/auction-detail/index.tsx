@@ -159,7 +159,7 @@ const DetailRight= ()=>{
                     </button>
                 </div>
                 <div className="text-right text-xs mt-0.5">
-                    <Link href="/assets" >
+                    <Link passHref href="/assets" >
                         {/* <a className="text-blue-400"> */}
                             Top up now
                         {/* </a> */}

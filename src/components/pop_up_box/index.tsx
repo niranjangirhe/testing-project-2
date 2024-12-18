@@ -64,7 +64,7 @@ const Pop_up_box = () =>{
                                     <p className="font-medium">{pop_up_boxData.type} {classNames(pop_up_boxData.state?"Success":"Failed")}</p>
                                     <p className={pop_up_boxData.state?"hidden":"mt-1 "}>Please try again</p>
                                     <div className={pop_up_boxData.hash == ""? "hidden":""}>
-                                    <Link href={`https://explorer-devnet.web3games.org/blocksdetails/${pop_up_boxData.hash}` } legacyBehavior>
+                                    <Link passHref href={`https://explorer-devnet.web3games.org/blocksdetails/${pop_up_boxData.hash}` } legacyBehavior>
                                         {/* <a className={pop_up_boxData.type !=="Create TokenList" && pop_up_boxData.type !=="Clear TokenList" && pop_up_boxData.state?"mt-1 underline font-semibold hover:text-blue-400":"hidden"}> */}
                                         View on Explorer
                                     {/* </a> */}

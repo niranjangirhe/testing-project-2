@@ -371,10 +371,10 @@ const Tokens = () =>{
                         </div>
                         <div className="flex text-xl mr-2 items-center">
                             <button onClick={()=>{DeleteTokensPopUpBox(item.token)}} className="mr-5">
-                                <i className="fa fa-trash-o" aria-hidden="true"></i>
+                                -<i className="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
 
-                            <Link    href={`https://explorer-devnet.web3games.org/account/${item.allAddress}`}  >
+                            <Link passHref    href={`https://explorer-devnet.web3games.org/account/${item.allAddress}`}  >
                                 <i  className="fa fa-share-square-o mt-0.5 cursor-pointer" aria-hidden="true"></i>
                             </Link>
 
@@ -427,14 +427,14 @@ const Tokens = () =>{
                                     <div className='flex justify-between text-xl font-light text-white 	mb-5'>
                                         <div className=" flex items-center">
                                             <button onClick={back} className="text-white">
-                                                <i className="fa fa-arrow-left" aria-hidden="true"></i>
+                                                -<i className="fa fa-arrow-left" aria-hidden="true"></i>
                                             </button>
                                             <div  className="font-semibold ml-4 text-xl">
                                                 Import token
                                             </div>
                                         </div>
                                         <button onClick={()=>{setImportToken(false)}} className="text-white text-2xl">
-                                            <i className="fa fa-times" aria-hidden="true"></i>
+                                            -<i className="fa fa-times" aria-hidden="true"></i>
                                         </button>
                                     </div>
 
@@ -638,14 +638,14 @@ const TokenList = () =>{
                                     <div className='flex justify-between text-xl font-light text-white items-center mb-5'>
                                         <div className=" flex items-center">
                                             <button onClick={back}>
-                                                <i className="fa fa-arrow-left" aria-hidden="true"></i>
+                                                -<i className="fa fa-arrow-left" aria-hidden="true"></i>
                                             </button>
                                             <div  className="font-light ml-4 text-xl text-white">
                                                 Select a token
                                             </div>
                                         </div>
                                         <button onClick={()=>{setCloseTokenList(false)}} className="text-2xl">
-                                            <i className="fa fa-times" aria-hidden="true"></i>
+                                            -<i className="fa fa-times" aria-hidden="true"></i>
                                         </button>
                                     </div>
 

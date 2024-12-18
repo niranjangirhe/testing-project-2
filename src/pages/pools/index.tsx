@@ -368,14 +368,14 @@ const Pools = () =>{
                                     <div className="flex text-gray-600">
                                         View on
                                         <div className="ml-0.5 text-blue-400 font-semibold">
-                                            <Link href='https://explorer-devnet.web3games.org/' >
+                                            <Link passHref href='https://explorer-devnet.web3games.org/' >
                                                 Web3Games Explorer
                                             </Link>
                                         </div>
                                     </div>
                                 </div>
                                 <button onClick={()=>{setOpenAlert(false)}} className="ml-6 text-gray-800 -mt-8">
-                                    <i className="fa fa-times" aria-hidden="true"></i>
+                                    -<i className="fa fa-times" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
@@ -532,7 +532,7 @@ const Pools = () =>{
 
                                             {/* CheckBox*/}
                                             <div className="mx-4 hidden md:flex items-center">
-                                                <input type="checkbox" className="accent-[#8E6CCD] mx-2" />
+                                                <input type="checkbox" className="accent-[#8E6CCD] mx-2" placeholder="--"/>
                                             <div className="text-gray-500">
                                                 Hide low TVL
                                             </div>
@@ -674,7 +674,7 @@ const Pools = () =>{
                                             Create New Pool
                                         </div>
                                         <button onClick={()=>{setOpenCreate(false)}} className="text-white text-3xl">
-                                            <i className="fa fa-times" aria-hidden="true"></i>
+                                            -<i className="fa fa-times" aria-hidden="true"></i>
                                         </button></div>
                                 </div>
                                 <div className="mt-5 ">

@@ -163,7 +163,7 @@ const ListItems= ()=>{
             <div className="my-12 px-4">
                 <div className=" grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8">
                     {items.map((item=>
-                <Link href="/#" key={item.img} >
+                <Link passHref href="/#" key={item.img} >
                     {/* <a className="transition duration-300 transform hover:scale-105 "> */}
                     <div>
                         <img className="rounded-2xl" src={item.img} alt=""/>
@@ -298,7 +298,7 @@ const Activity= ()=>{
                     </thead>
                     <tbody className=" divide-y divide-gray-600">
                     {tableDetail.map(item => (
-                        <Link key={item.id} href="/">
+                        <Link passHref key={item.id} href="/">
                         <tr  className="hover:bg-gray-800">
                             <td className="px-6 py-6 whitespace-nowrap text-sm font-semibold text-white">
                                 {item.type}
@@ -432,17 +432,17 @@ const Collections = () =>{
                                         {message.h1}
                                     </div>
                                     <div className="flex text-2xl mt-5">
-                                        <Link href={message.network} >
+                                        <Link passHref href={message.network} >
                                             {/* <a className="text-gray-400 mr-4"> */}
                                                 <i className={message.networkLogo} aria-hidden="true"></i>
                                             {/* </a> */}
                                         </Link>
-                                        <Link href={message.telegram} >
+                                        <Link passHref href={message.telegram} >
                                             {/* <a className=""> */}
                                                 <i className={message.telegramLogo} aria-hidden="true"></i>
                                             {/* </a> */}
                                         </Link>
-                                        <Link href={message.twitter} >
+                                        <Link passHref href={message.twitter} >
                                             {/* <a className=""> */}
                                                 <i className={message.twitterLogo} aria-hidden="true"></i>
                                             {/* </a> */}
