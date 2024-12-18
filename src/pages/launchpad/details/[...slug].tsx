@@ -129,7 +129,7 @@ const Content = () =>{
                                                         <div>
                                                             <input type="text"
                                                                    className="bg-[#616884] text-white text-xs xl:text-sm w-44 md:w-96 xl:w-full  rounded-lg p-2       hover:border-neutral-600 focus:border-neutral-600  transition duration-300    outline-none"
-                                                                   placeholder=""
+                                                                   placeholder="--"
                                                                    id=""
                                                             />
                                                         </div>
@@ -164,7 +164,7 @@ const Content = () =>{
                                                         <div className="flex w-full mr-10 items-center relative">
                                                             <input type="text"
                                                                    className=" bg-[#616884] text-white text-xs md:text-sm pr-14 md:pr-24 rounded-lg p-2 w-full hover:border-neutral-600 focus:border-neutral-600  transition duration-300    outline-none"
-                                                                   placeholder=""
+                                                                   placeholder="--"
                                                                    id=""
                                                             />
                                                             <span className="pointer-events-none absolute inset-y-0 text-xs md:text-base right-0 flex items-center pr-2">

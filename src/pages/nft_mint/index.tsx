@@ -126,7 +126,7 @@ const NFT_Mint = () =>{
                                                     Select Your Files
                                                     </button>
                                                 </div>
-                                                <input onChange={inputImg} type="file" id="file" className="opacity-0"  accept="image/*"/>
+                                                <input onChange={inputImg} type="file" id="file" className="opacity-0"  accept="image/*" placeholder="--"/>
                                             </div>
                                             </div>
                                             </form>

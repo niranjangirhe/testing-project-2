@@ -32,7 +32,7 @@ const AssetTop = () =>{
                 <div className="xl:flex">
                     <img  className="w-9/12 md:w-4/12 mx-auto xl:w-1/3 rounded-xl"  src={info.img}alt=""/>
                     <div className="xl:ml-10 xl:w-2/3 mt-10 xl:mt-0">
-                        <Link href="/" >
+                        <Link passHref href="/" >
                             {/* <a className="text-white  md:text-xl flex mb-4"> */}
                             <div>{info.name}</div>
                              <div className="ml-2"><i className="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -195,7 +195,7 @@ const AssetLeftDetail = () =>{
                             <div className="font-semibold">
                                 Contract Address
                             </div>
-                            <Link href="/#" >
+                            <Link passHref href="/#" >
                                 {/* <a> */}
                                     <div className="text-red-400 font-semibold">
                                         {info.address}
@@ -224,7 +224,7 @@ const AssetLeftDetail = () =>{
                             <div className="font-semibold">
                                 Metadata
                             </div>
-                            <Link href="/#" >
+                            <Link passHref href="/#" >
                                 {/* <a> */}
                                     <div className="text-red-400 font-semibold">
                                         {info.meta}
@@ -322,7 +322,7 @@ const AssetRightList =() =>{
                                                             {item.expiration}
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-white hover:text-red-400 transition duration-300">
-                                                            <Link href="/#" >
+                                                            <Link passHref href="/#" >
                                                             {item.from}
                                                             </Link>
                                                         </td>
@@ -435,7 +435,7 @@ const AssetRightOffers = () =>{
                                                             {item.expiration}
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-white hover:text-red-400 transition duration-300">
-                                                            <Link href="/#" >
+                                                            <Link passHref href="/#" >
                                                                 {/* <a className="hover:text-red-500 transition duration-300"> */}
                                                                     {item.from}
                                                                 {/* </a> */}
@@ -551,14 +551,14 @@ const AssetRightHistory = () =>{
 
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
-                                                            <Link href="/#" >
+                                                            <Link passHref href="/#" >
                                                                 {/* <a className="hover:text-red-500 transition duration-300"> */}
                                                                     {item.from}
                                                                 {/* </a> */}
                                                             </Link>
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-white hover:text-red-400 transition duration-300">
-                                                            <Link href="/#" >
+                                                            <Link passHref href="/#" >
                                                                 {/* <a className="hover:text-red-500 transition duration-300"> */}
                                                                     {item.to}
                                                                 {/* </a> */}

@@ -89,7 +89,7 @@ const Tail=()=>{
                         {end.content.map(item=>(
                     <div key={item.h1} className="my-3 text-gray-500 text-sm transition  duration-300 transform hover:translate-x-2 dark:text-gray-400">
 
-                        <Link href={item.href} >
+                        <Link passHref href={item.href} >
                         {/* <a> */}
                             {item.h1}
                         {/* </a> */}
@@ -108,7 +108,7 @@ const Tail=()=>{
                     <div className="flex justify-center md:justify-start md:ml-6 mt-10">
                         {participate.map(item=>(
                     <div key={item.icon} className="mr-5">
-                        <Link href={item.href} >
+                        <Link passHref href={item.href} >
                         {/* <a  className="text-gray-500 hover:text-gray-200"> */}
                         <i className={item.icon} aria-hidden="true"></i>
                         {/* </a> */}

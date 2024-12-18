@@ -16,7 +16,7 @@ const DetailsTop = () =>{
             <div className="xl:flex mt-8 justify-between">
                     <img  className="rounded-xl md:w-10/12 mx-auto xl:w-1/2 xl:mr-10" src="https://www.mintverse.com/images/pngs/games/hegemony/banner2.jpg" alt=""/>
                 <div className="xl:w-1/2 mt-8 xl:mt-0">
-                    <Link href="/" legacyBehavior>
+                    <Link passHref href="/" legacyBehavior>
                         {/* <a className="text-indigo-400 text-2xl ">  */}
                             Wrath of Conquerors
                             {/* </a> */}

@@ -108,7 +108,7 @@ const Ranking = () =>{
                                     Ranked by volume, avg closed price and other statistics.
                                 </div>
                                 <div className=" mx-auto w-24">
-                                    <select className="relative  font-bold px-2 py-2.5 outline-none bg-gray-700 rounded-full flex-auto  overflow-ellipsis  focus:placeholder:text-low-emphesis flex-grow  text-left bg-transparent text-inherit disabled:cursor-not-allowed">
+                                    <select className="relative  font-bold px-2 py-2.5 outline-none bg-gray-700 rounded-full flex-auto  overflow-ellipsis  focus:placeholder:text-low-emphesis flex-grow  text-left bg-transparent text-inherit disabled:cursor-not-allowed" title="-">
                                     <option value ="Never">All time </option>
                                     <option value ="1Hour">Last 24 hours</option>
                                     <option value="24Hours">Last 7 days</option>
@@ -133,7 +133,7 @@ const Ranking = () =>{
                                         </thead>
                                         <tbody className=" divide-y divide-gray-200 ">
                                         {rankings.map(item=>(
-                                            <Link  key={item.id} href="/collections">
+                                            <Link passHref  key={item.id} href="/collections">
                                             <tr className="hover:bg-gray-800 bg-opacity-80 cursor-pointer transition duration-300 " >
                                                         <td className="px-2 py-4 whitespace-nowrap text-sm text-white">
                                                     {item.id}

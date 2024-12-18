@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Link from "next/link";
 import {Dialog, Transition} from "@headlessui/react";
 import {useAtom} from "jotai";
+import Image from "next/image";
 import {
     AssetsOpenPopup,
     AccountChooseValue,
@@ -15,9 +16,9 @@ import {
 import Heads from "../../components/head";
 
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//     return classes.filter(Boolean).join(' ')
+// }
 
 const AssetsTop = () =>{
     const router = useRouter()
@@ -45,10 +46,11 @@ const AssetsTop = () =>{
           <>
               <div>
                   <div className="flex">
-                      <img className="w-16 rounded-full border border-gray-600" src="/img.png" alt=""/>
+                      {/* <img className="w-16 rounded-full border border-gray-600" src="/img.png" alt=""/> */}
+                      <Image className="w-16 rounded-full border border-gray-600" src="/img.png" alt=""/>
                       <div className="ml-4 flex-col justify-between">
                           {/**/}
-                          <Link href={`https://explorer-devnet.web3games.org/address/${intactWalletAddress}`} >
+                          <Link passHref href={`https://explorer-devnet.web3games.org/address/${intactWalletAddress}`}>
                               {/* <a className="text-gray-300 text-2xl flex hover:text-indigo-400 transition duration-150"> */}
                                   {walletAddress}
                                   <div className="ml-1 text-xl">
@@ -109,7 +111,7 @@ const AssetsTop = () =>{
                       <img className="w-16 rounded-full border border-gray-600" src="/img.png" alt=""/>
                       <div className="ml-4 flex-col justify-between">
                           {/**/}
-                          <Link href={`https://explorer-devnet.web3games.org/account/${intactWalletAddress}`} >
+                          <Link passHref href={`https://explorer-devnet.web3games.org/account/${intactWalletAddress}`} >
                               {/* <a className="text-gray-300 text-2xl flex hover:text-indigo-400 transition duration-150"> */}
                                   {walletAddress}
                                   <div className="ml-1 text-xl">
@@ -349,149 +351,149 @@ const AssetsWallet = () =>{
         </>
     )
 }
-const AssetsBentoBox = () =>{
-    const router = useRouter()
-    const [AccountChooseValueType,] = useAtom(AccountChooseValue)
-    const [addressType,SetaddressType] = useState('')
+// const AssetsBentoBox = () =>{
+//     const router = useRouter()
+//     const [AccountChooseValueType,] = useAtom(AccountChooseValue)
+//     const [addressType,SetaddressType] = useState('')
 
-    useEffect(()=>{
-        if (router.isReady){
-            if (AccountChooseValueType == 2){
-                SetaddressType('WASM')
-            }else{
-                SetaddressType('EVM')
-            }
-        }
-    },[router.isReady])
-    const BentoBoxTitle = [
-        {
-            name:"Assets"
-        },
+//     useEffect(()=>{
+//         if (router.isReady){
+//             if (AccountChooseValueType == 2){
+//                 SetaddressType('WASM')
+//             }else{
+//                 SetaddressType('EVM')
+//             }
+//         }
+//     },[router.isReady])
+//     const BentoBoxTitle = [
+//         {
+//             name:"Assets"
+//         },
 
-        {
-            name:"Balance"
-        },
-        {
-            name:"Locked"
-        },
-        {
-            name:"Value"
-        },
-    ]
-    const BentoBoxInfo = [
-        {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        },
-        {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        },
-        {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        },
-        {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        },
-        {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        }, {
-            id:"1",
-            asset:"$3,524.58",
-            balance:"6532231.20",
-            locked:"20",
-            value:"0.00",
-        },
+//         {
+//             name:"Balance"
+//         },
+//         {
+//             name:"Locked"
+//         },
+//         {
+//             name:"Value"
+//         },
+//     ]
+//     const BentoBoxInfo = [
+//         {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         },
+//         {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         },
+//         {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         },
+//         {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         },
+//         {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         }, {
+//             id:"1",
+//             asset:"$3,524.58",
+//             balance:"6532231.20",
+//             locked:"20",
+//             value:"0.00",
+//         },
 
 
-    ]
-    return(
-        <>
-            <div className="mt-20">
-                <div>
-                    <div className="text-white text-xl">
-                        {addressType} Contract
-                    </div>
-                    <div className='mt-6 mx-auto   '>
-                        <div className='overflow-auto  h-96'>
-                            <table className=" divide-y   border border-gray-800    divide-gray-800 mb-4">
-                                <thead className="overflow-auto">
-                                <tr>
-                                    {BentoBoxTitle.map((item=>(
-                                        <th key={item.name}
-                                            scope="col"
-                                            className="px-6  py-2 text-left  text-sm  md:font-semibold text-gray-300"
-                                        >
-                                            {item.name}
-                                        </th>
-                                    )))}
-                                </tr>
-                                </thead>
-                                <tbody className={BentoBoxInfo.length?"divide-y  divide-gray-800":"hidden"}>
-                                {BentoBoxInfo.map(item=>(
-                                    <tr key={item.id} className="hover:bg-gray-800 bg-opacity-80  cursor-pointer transition duration-300 " >
-                                        <td className="px-6 py-4  w-56 whitespace-nowrap text-sm text-white">
-                                            <div className="flex ">
-                                                <img className="w-10  rounded-full border border-gray-600" src="https://cryptoempire.games/logo-cryptoempire.png" alt=""/>
-                                                <div className="ml-2  ">
-                                                    <div>
-                                                        EMP
-                                                    </div>
-                                                    <div className="text-gray-400 ">
-                                                        {item.asset}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
-                                                {item.balance}
-                                        </td>
-                                        <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
-                                            {item.locked}
-                                        </td>
-                                        <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
-                                            <div>
-                                                ${item.value}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                ))}
-                                </tbody>
-                            </table>
-                            <div className={BentoBoxInfo.length?"hidden":"flex justify-center w-full lg:w-1/2 "}>
-                                <div className=" pt-4 text-3xl text-center text-gray-400">
-                                    <i className="fa fa-archive " aria-hidden="true"></i>
-                                    <div className="text-xl">
-                                        No Data
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+//     ]
+//     return(
+//         <>
+//             <div className="mt-20">
+//                 <div>
+//                     <div className="text-white text-xl">
+//                         {addressType} Contract
+//                     </div>
+//                     <div className='mt-6 mx-auto   '>
+//                         <div className='overflow-auto  h-96'>
+//                             <table className=" divide-y   border border-gray-800    divide-gray-800 mb-4">
+//                                 <thead className="overflow-auto">
+//                                 <tr>
+//                                     {BentoBoxTitle.map((item=>(
+//                                         <th key={item.name}
+//                                             scope="col"
+//                                             className="px-6  py-2 text-left  text-sm  md:font-semibold text-gray-300"
+//                                         >
+//                                             {item.name}
+//                                         </th>
+//                                     )))}
+//                                 </tr>
+//                                 </thead>
+//                                 <tbody className={BentoBoxInfo.length?"divide-y  divide-gray-800":"hidden"}>
+//                                 {BentoBoxInfo.map(item=>(
+//                                     <tr key={item.id} className="hover:bg-gray-800 bg-opacity-80  cursor-pointer transition duration-300 " >
+//                                         <td className="px-6 py-4  w-56 whitespace-nowrap text-sm text-white">
+//                                             <div className="flex ">
+//                                                 <img className="w-10  rounded-full border border-gray-600" src="https://cryptoempire.games/logo-cryptoempire.png" alt=""/>
+//                                                 <div className="ml-2  ">
+//                                                     <div>
+//                                                         EMP
+//                                                     </div>
+//                                                     <div className="text-gray-400 ">
+//                                                         {item.asset}
+//                                                     </div>
+//                                                 </div>
+//                                             </div>
+//                                         </td>
+//                                         <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
+//                                                 {item.balance}
+//                                         </td>
+//                                         <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
+//                                             {item.locked}
+//                                         </td>
+//                                         <td className="px-6  py-1  whitespace-nowrap text-base text-white ">
+//                                             <div>
+//                                                 ${item.value}
+//                                             </div>
+//                                         </td>
+//                                     </tr>
+//                                 ))}
+//                                 </tbody>
+//                             </table>
+//                             <div className={BentoBoxInfo.length?"hidden":"flex justify-center w-full lg:w-1/2 "}>
+//                                 <div className=" pt-4 text-3xl text-center text-gray-400">
+//                                     <i className="fa fa-archive " aria-hidden="true"></i>
+//                                     <div className="text-xl">
+//                                         No Data
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
 
-            </div>
-        </>
-    )
-}
+//             </div>
+//         </>
+//     )
+// }
 const AssetsOpen = () =>{
     const [selectopen,setSelectopen] = useAtom(AssetsOpenPopup)
     return(
@@ -534,7 +536,7 @@ const AssetsOpen = () =>{
                                     </div>
                                     <div className="my-5 ">
 
-                                        <Link href="/home" >
+                                        <Link passHref href="/home" >
                                             {/* <a> */}
                                     <div className="text-gray-500 p-3 mb-4 border border-gray-600 rounded-xl flex">
                                         <div className="text-lg">
@@ -547,7 +549,7 @@ const AssetsOpen = () =>{
                                             {/* </a> */}
                                         </Link>
 
-                                        <Link href="/transfer" >
+                                        <Link passHref href="/transfer" >
                                             {/* <a> */}
                                         <div  className="text-gray-500 p-3  mb-4 border border-gray-600 rounded-xl flex">
                                             <div className="text-lg">
@@ -559,7 +561,7 @@ const AssetsOpen = () =>{
                                         </div>
                                             {/* </a> */}
                                         </Link>
-                                        <Link href="/transaction" >
+                                        <Link passHref href="/transaction" >
                                             {/* <a> */}
                                                 <div  className="text-gray-500 p-3  mb-4 border border-gray-600 rounded-xl flex">
                                                     <div className="text-lg">
@@ -583,7 +585,7 @@ const AssetsOpen = () =>{
 
 
 const Assets = () =>{
-    const [intactWalletAddress,] = useAtom(IntactWalletAddress)
+    const [intactWalletAddress,setintactWalletAddress] = useAtom(IntactWalletAddress)
         return (
           <div>
               <Heads/>

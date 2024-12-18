@@ -1,3 +1,4 @@
+
 import Header from '../../../components/header/index.';
 import Tail from '../../../components/tail';
 import React, { Fragment, useState, useEffect, useCallback } from 'react';
@@ -703,7 +704,7 @@ const Detail = () => {
             <div className="">
               <div className="max-w-7xl relative px-5 pt-16 pb-32 sm:px-6  mx-auto ">
                 <div className="flex justify-center xl:justify-start">
-                  <Link href="/pools">
+                  <Link passHref href="/pools">
                     {/* <a  className="p-0.5 rounded-lg bg-gradient-to-r from-W3G1  via-W3G2 to-W3G3  mb-10"> */}
                     <div className="bg-black rounded-lg text-white p-2 w-90 text-center">View Pools</div>
 
@@ -725,7 +726,7 @@ const Detail = () => {
                           </div>
                           <div className="ml-2 text-white font-semibold">
                             <div>{PoolDetails.assets_a}</div>
-                            <Link href={`${PoolDetails.assets_a_address}`}>
+                            <Link passHref href={`${PoolDetails.assets_a_address}`}>
                               {/* <a className="text-xs text-gray-300"> */}
                               Owner:{address_slice(PoolDetails.assets_a_address)}
                               {/* </a> */}
@@ -741,7 +742,7 @@ const Detail = () => {
                           </div>
                           <div className="ml-2 text-white font-semibold  ">
                             <div>{PoolDetails.assets_b}</div>
-                            <Link href={`${PoolDetails.assets_b_address}`}>
+                            <Link passHref href={`${PoolDetails.assets_b_address}`}>
                               {/* <a className="text-xs text-gray-300"> */}
                               Owner:{address_slice(PoolDetails.assets_b_address)}
                               {/* </a> */}
@@ -854,7 +855,7 @@ const Detail = () => {
                         <div className="flex justify-between text-xl text-white w-full">
                           <div>Add Liquidity</div>
                           <button onClick={closeOpen}>
-                            <i className="fa fa-times" aria-hidden="true"></i>
+                            -<i className="fa fa-times" aria-hidden="true"></i>
                           </button>
                         </div>
                       </div>
@@ -971,7 +972,7 @@ const Detail = () => {
                               'lg:mt-0  w-56 px-3 py-2 rounded-lg bg-gradient-to-r text-white',
                             )}
                           >
-                            <i className="fa fa-spinner fa-pulse  fa-fw"></i>
+                            -<i className="fa fa-spinner fa-pulse  fa-fw"></i>
                           </button>
                         </div>
                       </div>
@@ -1019,7 +1020,7 @@ const Detail = () => {
                               setOpenRemove(false);
                             }}
                           >
-                            <i className="fa fa-times" aria-hidden="true"></i>
+                            -<i className="fa fa-times" aria-hidden="true"></i>
                           </button>
                         </div>
                       </div>

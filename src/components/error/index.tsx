@@ -17,7 +17,7 @@ export default function Error() {
                     </h1>
                     <div className="mt-6">
                         <div className="inline-flex items-center px-4 py-2 border border-transparent text-sm text-indigo-500 font-medium rounded-md text-black bg-white hover:bg-gray-700 hover:text-white transition duration-300">
-                            <Link href="/home">
+                            <Link passHref href="/home">
                                 Go back home
                             </Link>
                         </div>

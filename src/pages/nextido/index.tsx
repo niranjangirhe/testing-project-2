@@ -102,7 +102,7 @@ const Content = () => {
                     </div>
                     <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3  gap-8 mt-5" >
                         {project.map((item =>(
-                            <Link key={item.project_name} href={`/launchpad/details/${item.project_name}`}>
+                            <Link passHref key={item.project_name} href={`/launchpad/details/${item.project_name}`}>
                             <div  className="rounded-lg">
                                 <div className='relative '>
                                     <img className="rounded-lg md:rounded-t-lg w-full h-48"  src={item.project_image_url} alt=""/>
@@ -151,7 +151,7 @@ const Content = () => {
 
                     <div className="md:hidden mt-5 grid grid-cols-1 gap-8" >
                         {project.map((item =>(
-                            <Link key={item.project_name} href={`/launchpad/details/${item.project_name}`}>
+                            <Link passHref key={item.project_name} href={`/launchpad/details/${item.project_name}`}>
                             <div className="rounded-lg flex p-1.5 bg-W3GNavigationBorder  ">
                                 <div className='relative w-11/12'>
                                     <img className="rounded-lg md:rounded-t-lg  h-40"  src={item.project_image_url} alt=""/>

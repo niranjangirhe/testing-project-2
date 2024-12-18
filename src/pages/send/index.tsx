@@ -42,12 +42,12 @@ const Send = () =>{
                             <div className="flex  justify-center  mx-auto px-2 py-12 sm:px-0">
                                 <div className="bg-black bg-opacity-90 p-5 rounded-2xl">
                                     <div className="flex border-b border-gray-500 pl-6 ">
-                                        <Link href="/bridge" >
+                                        <Link passHref href="/bridge" >
                                             {/* <a className="text-gray-400 font-semibold py-4 mr-8  hover:text-white"> */}
                                                 Bridge
                                             {/* </a> */}
                                         </Link>
-                                        <Link href="/send" >
+                                        <Link passHref href="/send" >
                                             {/* <a className="text-white py-4 pb-2 border-b font-semibold hover:text-white  "> */}
                                                 Send
                                             {/* </a> */}

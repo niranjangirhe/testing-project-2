@@ -280,7 +280,7 @@ const token = [
                           </label>
                           <input type="text"
                                  className="bg-[#303030] text-xs md:text-sm  2xl:text-lg rounded-lg p-3 text-white focus:border-neutral-400  w-full  border border-neutral-700  transition duration-500  outline-none "
-                                 placeholder=""
+                                 placeholder="0"
                                  autoComplete="off"
                                  id="faucet"
                           />

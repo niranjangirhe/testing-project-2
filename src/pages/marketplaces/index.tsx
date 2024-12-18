@@ -36,7 +36,7 @@ const Featured = () =>{
                 </div>
                 <div className="flex justify-between overflow-auto xl:overflow-hidden">
                     {featured.map((item=>(
-                        <Link key={item.name} href="/marketplaces">
+                        <Link passHref key={item.name} href="/marketplaces">
                         {/* <a   className="md:flex md:h-72   xl:w-7/12  mb-10 md:mr-72 xl:mr-10 px-2.5"> */}
                             <img className="w-96  md:w-72 rounded-2xl " src={item.img} alt=""/>
                             <div className="md:mx-5 my-3 w-72 md:w-96  xl:w-72 mx-5">
@@ -165,7 +165,7 @@ const Rank = () =>{
                         NFT Ranking list
                     </div>
                     <div className="text-blue-400 text-xl mt-2">
-                        <Link href="/home" >
+                        <Link passHref href="/home" >
                             {/* <a> */}
                             View All
                             {/* </a> */}
@@ -179,7 +179,7 @@ const Rank = () =>{
                             {item.title}
                         </div>
                         {item.info.map(item=>(
-                            <Link  href="/marketplaces" key={item.name} >
+                            <Link passHref  href="/marketplaces" key={item.name} >
                             {/* <a  className="flex mt-6 hover:bg-gray-800  py-2 px-6 pr-16 "> */}
                             <div className="text-2xl font-semibold mt-2 mr-8">
                                 {item.rank}
@@ -252,7 +252,7 @@ const Trending = () =>{
                 </div>
                 <div className="mt-20 mx-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
                     {trending.map((item=>(
-                        <Link key={item.name} href="/home">
+                        <Link passHref key={item.name} href="/home">
                     {/* <a className="transition duration-300 transform  hover:scale-105"> */}
                         <div className="">
                         <img className="w-full rounded-xl" src={item.img} alt=""/>
@@ -321,7 +321,7 @@ const MarketPlaces = () =>{
                                     />
                                 </div>
                                 <div className="flex justify-center mt-8">
-                                    <Link href="/home" >
+                                    <Link passHref href="/home" >
                                     {/* <a className="px-10 py-2 rounded-full bg-red-400"> */}
                                         Explore
                                     {/* </a> */}

@@ -1,9 +1,9 @@
 ## How to use
 ```cmd
--envirionment
+-Envirionment
 node version : 18.xx
 
--instruction
+-Instruction
 npm i
 
 npm start
