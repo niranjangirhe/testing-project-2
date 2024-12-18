@@ -141,7 +141,9 @@ const Trident = () => {
               </Transition>
             </Menu>
           ))}
-          <div className={selected.id !== 2 ? 'hidden' : ' '}>
+          <div
+        //    className={selected.id !== 2 ? 'hidden' : ' '}
+           >
             {TestNavigation.map(item => (
               <Link key={item.name} href={item.href}>
                 {/* <a  className="relative inline-block text-left font-semibold  w-24 xl:w-full text-center"> */}
