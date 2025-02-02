@@ -7,6 +7,7 @@
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "start": "concurrently \"node server/app.js\" \"next --port 3002\"",
     "build": "concurrently \"node server/app.js\" \"next build\"",
 =======
@@ -21,6 +22,12 @@
     "test": "concurrently \"node server/server.js\" \"next test\"",
     "eject": "concurrently \"node server/server.js\" \"next eject\""
 >>>>>>> af91837 (change api)
+=======
+    "start": "concurrently \"node server/server.js\" \"next --port 3002\"",
+    "build": "concurrently \"node server/server.js\" \"next build\"",
+    "test": "concurrently \"node server/server.js\" \"next test\"",
+    "eject": "concurrently \"node server/server.js\" \"next eject\""
+>>>>>>> 7d83da4 (prettier)
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
