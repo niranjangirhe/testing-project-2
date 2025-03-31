@@ -125,14 +125,14 @@ const Trident = () => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="origin-top-right absolute  mt-1 -mr-10 z-20   border-2 border-gray-800 rounded-md shadow-lg bg-black  focus:outline-none">
-                  <div className="py-1  text-gray-400 flex flex-col">
+                <Menu.Items className="origin-top-right absolute z-20 mt-2 min-w-24 rounded-md shadow-lg bg-black border border-gray-700 focus:outline-none">
+                  <div className="py-1">
                     {item.contents.map(contents => (
                       <Menu.Item key={contents.name}>
-                        <Link href={contents.href}>
-                          {/* <a className=" hover:bg-gray-800 hover:text-white  block px-4 py-2 text-sm" > */}
-                          {contents.name}
-                          {/* </a> */}
+                        <Link href={contents.href} passHref>
+                          <div className="text-gray-300 px-4 py-2 text-sm hover:bg-gray-800 hover:text-white">
+                            {contents.name}
+                          </div>
                         </Link>
                       </Menu.Item>
                     ))}
@@ -145,7 +145,7 @@ const Trident = () => {
           //    className={selected.id !== 2 ? 'hidden' : ' '}
           >
             {TestNavigation.map(item => (
-              <Link key={item.name} href={item.href}>
+              <Link key={item.name} href={item.href} passHref>
                 {/* <a  className="relative inline-block text-left font-semibold  w-24 xl:w-full text-center"> */}
                 <div
                   className=" py-2.5 text-sm leading-5  rounded-lg text-base font-medium text-gray-100
