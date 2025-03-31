@@ -8,7 +8,8 @@
     "start": "concurrently \"node server/server.js\" \"next --port 3002\"",
     "build": "concurrently \"node server/server.js\" \"next build\"",
     "test": "concurrently \"node server/server.js\" \"next test\"",
-    "eject": "concurrently \"node server/server.js\" \"next eject\""
+    "eject": "concurrently \"node server/server.js\" \"next eject\"",
+    "dev": "concurrently \"node server/server.js\" \"next dev\""
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
